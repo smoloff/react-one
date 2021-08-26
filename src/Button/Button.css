@@ -1,0 +1,16 @@
+.btn {
+    width: 100%;
+    display: flex;
+}
+.btn__left {
+    justify-content: flex-start;
+}
+.btn__right {
+    justify-content: flex-end;
+}
+.btn__wrapper {
+    border: 0;
+    outline: 0;
+    background-color: blue;
+    color: white
+}
