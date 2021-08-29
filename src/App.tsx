@@ -1,23 +1,47 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Button, { Position } from './Button/Button';
+import Popup from './Popup/Popup';
 
-function App() {
+const App = () => {
+
+  let isPopupVisible: boolean = false
+
+  const handleClick = (e:React.MouseEvent<HTMLButtonElement>) => {
+    console.log('handleClick');
+    e.preventDefault()
+    isPopupVisible = true
+  }
+
+  const handlePopupSubmit = (e:React.MouseEvent<HTMLButtonElement>) => {
+    console.log('handlePopupSubmit')   
+    e.preventDefault()
+    isPopupVisible = false
+
+  }
+
+  const handlePopupClose = (e:React.MouseEvent<HTMLButtonElement>) => {
+    console.log('handlePopupClose');
+    e.preventDefault()
+    isPopupVisible = false
+
+
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-      <Button title="press me" position={Position.Left}/>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        
-        <Button title="click on me" position={Position.Right}/>
-      </header>
+      <Button title="press me" position={Position.Left} onClick={handleClick} />
+      <Popup
+        title='Create new order'
+        description="Do you want to make new order?"
+        isVisible={isPopupVisible} 
+        handleSubmit={handlePopupSubmit}
+        handleClose={handlePopupClose}
+        />
     </div>
   );
 }
+
 
 export default App;
 

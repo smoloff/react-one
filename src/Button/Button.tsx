@@ -6,8 +6,14 @@ export enum Position {
     Right
 }
 
+interface Props {
+    title: string, 
+    position: Position, 
+    onClick: (e:React.MouseEvent<HTMLButtonElement>) => void 
+}
+
 // props
-const Button: React.FC<{ title: string, position: Position }> = ({ title, position }) => {
+const Button: React.FC<Props> = ({ title, position, onClick }) => {
    const getStyle = () => {
        if (position === Position.Left) {
            return "btn__left"
@@ -19,7 +25,7 @@ const Button: React.FC<{ title: string, position: Position }> = ({ title, positi
    }
     return (
         <div className={["btn", getStyle()].join(' ')}>
-            <button className="btn__wrapper">{title}</button>
+            <button className="btn__wrapper" onClick={onClick}>{title}</button>
 
         </div>)
 }

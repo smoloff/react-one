@@ -1,0 +1,65 @@
+.popup {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    width:fit-content;
+    padding: 20px;
+}
+.popup > * {
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.popup__title{
+    color:black;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.form {
+
+}
+
+.popup__description {
+    color: rgb(37,37,37)
+
+}
+
+.form__input{
+    border: 0;
+    outline: 0;
+    margin-bottom: 20px;
+}
+
+.form__button-cnt{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.button {
+padding: 10px;
+border-radius: 10px;
+font-weight: 600;
+border:none
+}
+.button:hover {
+    cursor: pointer;
+}
+
+.button__cancel{
+    color: rgb(6, 119, 34);
+    background-color: #fff;
+
+}
+.button__cancel:hover {
+    background-color: rgb(200, 200, 200);
+}
+
+.button__submit{
+    color: rgb(6, 119, 34);
+    background-color: rgb(197, 243, 288);
+}
+
+.button__submit:hover{
+    background-color: rgb(168, 236, 184);
+}
