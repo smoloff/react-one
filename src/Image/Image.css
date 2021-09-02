@@ -1,7 +1,10 @@
 .image_cnt {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    gap: 20px;
 }
 
 .image_blurb {
